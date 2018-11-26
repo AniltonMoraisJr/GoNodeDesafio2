@@ -1,0 +1,12 @@
+<ul class="providers">
+    {% for appointment in appointments %}
+        <li class="provider">
+            <div>
+                <img src="/file/{{ appointment.User.avatar }}" alt=""/>
+                <strong>{{ appointment.User.name }}</strong>
+                <br/>
+                <strong>Horário </strong> {{ appointment.date | date("HH:mm") }}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
